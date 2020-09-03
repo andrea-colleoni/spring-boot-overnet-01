@@ -1,10 +1,10 @@
-package corso.spring.giorno2;
+package corso.spring.clienti;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Giorno2ApplicationTests {
+class ClientiApplicationTests {
 
 	@Test
 	void contextLoads() {
