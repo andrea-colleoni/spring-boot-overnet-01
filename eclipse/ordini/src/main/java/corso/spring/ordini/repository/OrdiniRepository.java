@@ -1,11 +1,9 @@
 package corso.spring.ordini.repository;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.repository.CrudRepository;
 
 import corso.spring.ordini.model.Ordine;
 
-@RepositoryRestResource(collectionResourceRel = "ordini", path = "ordini")
-public interface OrdiniRepository extends PagingAndSortingRepository<Ordine, Integer> {
+public interface OrdiniRepository extends CrudRepository<Ordine, Integer> {
 
 }

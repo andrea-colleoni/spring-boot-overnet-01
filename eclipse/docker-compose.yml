@@ -1,0 +1,20 @@
+version: "3"
+services:
+    config:
+        image: andrea/config-server
+        networks:
+            - microservizi
+        ports:
+            - 8888:8888
+        volumes:
+            - C:\Users\andre\oec116-config:/oec116-config
+    clienti:
+        image: andrea/clienti-microservice
+        environment:
+            CONFIG_SERVER_URI: http://config:8888
+        networks:
+            - microservizi
+        depends_on:
+            - config
+networks:
+    microservizi:
